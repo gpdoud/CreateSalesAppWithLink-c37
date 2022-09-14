@@ -26,5 +26,15 @@ namespace CreateSalesAppWithLink.Models {
 
         public int CustomerId { get; set; } // FK to Customer
         public virtual Customer Customer { get; set; }
+
+        public override string ToString() {
+            return $"\nOrder  \n" +
+                   $"   Id:     {Id}\n" +
+                   $"   Desc:   {Description}\n" +
+                   $"   Total:  {Total:C}\n" +
+                   $"   Status: {Status}\n" +
+                   $"   Date:   {Date}\n" +
+                   $"   CustId: {CustomerId}\n";
+        }
     }
 }
